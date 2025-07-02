@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mes Jeux</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      margin: 20px;
+    }
+    nav button {
+      margin: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    iframe {
+      border: 1px solid #ccc;
+      width: 900px;
+      height: 700px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mes Jeux</h1>
+  <nav>
+    <button onclick="loadGame('https://mastermanga.github.io/TestZone/')">Jeu 1</button>
+    <button onclick="loadGame('https://exemple.github.io/jeu2/')">Jeu 2</button>
+    <button onclick="loadGame('https://exemple.github.io/jeu3/')">Jeu 3</button>
+    <button onclick="loadGame('https://exemple.github.io/jeu4/')">Jeu 4</button>
+    <button onclick="loadGame('https://exemple.github.io/jeu5/')">Jeu 5</button>
+  </nav>
+
+  <iframe id="gameFrame" src="" frameborder="0"></iframe>
+
+  <script>
+    function loadGame(url) {
+      document.getElementById('gameFrame').src = url;
+    }
+  </script>
+</body>
+</html>
