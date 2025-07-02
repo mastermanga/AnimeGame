@@ -2,28 +2,59 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Mes Jeux</title>
+  <title>Mes Jeux - Mode Sombre</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 0;
-      padding: 0;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    h1 {
+      margin-bottom: 15px;
+      color: #bb86fc;
     }
     nav {
-      margin: 20px;
+      margin-bottom: 20px;
     }
     nav button {
-      margin: 5px;
-      padding: 10px 20px;
+      background-color: #1f1f1f;
+      border: 1px solid #bb86fc;
+      color: #bb86fc;
+      padding: 12px 25px;
+      margin: 0 8px;
+      font-size: 1rem;
+      border-radius: 6px;
       cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    nav button:hover {
+      background-color: #bb86fc;
+      color: #121212;
     }
     iframe {
-      border: 1px solid #ccc;
-      width: 900px;
-      height: 700px;
+      border: 2px solid #bb86fc;
+      border-radius: 8px;
+      width: 1200px;
+      height: 800px;
+      background-color: #000;
+      box-shadow: 0 0 15px #bb86fcaa;
+    }
+    @media (max-width: 1300px) {
+      iframe {
+        width: 90vw;
+        height: 60vw;
+      }
+      nav button {
+        padding: 10px 15px;
+        margin: 5px 5px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -31,13 +62,13 @@
   <h1>Mes Jeux</h1>
   <nav>
     <button onclick="loadGame('https://mastermanga.github.io/TestZone/')">Jeu 1</button>
-    <button onclick="loadGame('https://exemple.github.io/jeu2/')">Jeu 2</button>
-    <button onclick="loadGame('https://exemple.github.io/jeu3/')">Jeu 3</button>
-    <button onclick="loadGame('https://exemple.github.io/jeu4/')">Jeu 4</button>
-    <button onclick="loadGame('https://exemple.github.io/jeu5/')">Jeu 5</button>
+    <button onclick="loadGame('https://mastermanga.github.io/AnimeTournament/')">Jeu 2</button>
+    <button onclick="loadGame('https://mastermanga.github.io/AnimeQuizz/')">Jeu 3</button>
+    <button onclick="loadGame('https://mastermanga.github.io/Anidle/')">Jeu 4</button>
+    <button onclick="loadGame('https://mastermanga.github.io/CharaClue/')">Jeu 5</button>
   </nav>
 
-  <iframe id="gameFrame" src="" frameborder="0"></iframe>
+  <iframe id="gameFrame" src="" frameborder="0" allowfullscreen></iframe>
 
   <script>
     function loadGame(url) {
@@ -46,3 +77,4 @@
   </script>
 </body>
 </html>
+
